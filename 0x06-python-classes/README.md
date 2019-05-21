@@ -45,23 +45,27 @@ ________________________________________________________________________________
 
 ## Tasks:
 
-_________________________________________________________________________
 
 	0. My first square
+_________________________________________________________________________
 		Write an empty class Square that defines a square:
 
 		-You are not allowed to import any module
 
+_________________________________________________________________________
 
 	1. Square with size
+_________________________________________________________________________
 		Write a class Square that defines a square by: (based on 0-square.py)
 
 		-Private instance attribute: size
 		-Instantiation with size (no type/value verification)
 		-You are not allowed to import any module
 
+_________________________________________________________________________
 
 	2. Size validation
+_________________________________________________________________________
 		Write a class Square that defines a square by: (based on 1-square.py)
 
 		-Private instance attribute: size
@@ -70,8 +74,10 @@ _________________________________________________________________________
 		-if size is less than 0, raise a ValueError exception with the message size must be >= 0
 		-You are not allowed to import any module
 
+_________________________________________________________________________
 
 	3. Area of a square
+_________________________________________________________________________
 		Write a class Square that defines a square by: (based on 2-square.py)
 
 		-Private instance attribute: size
@@ -80,9 +86,11 @@ _________________________________________________________________________
 		-if size is less than 0, raise a ValueError exception with the message size must be >= 0
 		-Public instance method: def area(self): that returns the current square area
 		-You are not allowed to import any module
+_________________________________________________________________________
 
 
 	4. Access and update private attribute
+_________________________________________________________________________
 		Write a class Square that defines a square by: (based on 3-square.py)
 
 		-Private instance attribute: size:
@@ -93,9 +101,10 @@ _________________________________________________________________________
 		-Instantiation with optional size: def __init__(self, size=0):
 		-Public instance method: def area(self): that returns the current square area
 		-You are not allowed to import any module
-
+_________________________________________________________________________
 
 	5. Printing a square
+_________________________________________________________________________
 		Write a class Square that defines a square by: (based on 4-square.py)
 
 		-Private instance attribute: size:
@@ -110,7 +119,10 @@ _________________________________________________________________________
 		-You are not allowed to import any module
 
 
+_________________________________________________________________________
+
 	6. Coordinates of a square
+_________________________________________________________________________
 		Write a class Square that defines a square by: (based on 5-square.py)
 
 		-Private instance attribute: size:
