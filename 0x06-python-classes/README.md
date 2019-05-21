@@ -26,7 +26,6 @@ ________________________________________________________________________________
 	-How does Python find the attributes of an object or class
 	-How to use the getattr function
 
-_______________________________________________________________________________________________
 
 ## General Requirements:
 
@@ -43,7 +42,6 @@ ________________________________________________________________________________
 	-All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 	-All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
-_________________________________________________________________________
 
 ## Tasks:
 
