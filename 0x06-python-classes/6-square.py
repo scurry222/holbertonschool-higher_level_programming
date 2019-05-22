@@ -30,7 +30,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-
     @property
     def size(self):
         """ Defines size of square object
