@@ -14,8 +14,8 @@ class Square:
             size (obj: 'int'): for size attribute
             position (obj: 'int') for position attribute
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
         """ Set private attribute of square size to var size
             Set private attribute of position to var position
         """
