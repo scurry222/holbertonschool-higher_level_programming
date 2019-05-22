@@ -8,12 +8,6 @@ class Square:
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        """ Initializes square class
-
-        Args:
-            size (obj: 'int'): for size attribute
-            position (obj: 'int') for position attribute
-        """
         self.size = size
         self.position = position
         """ Set private attribute of square size to var size
@@ -69,11 +63,10 @@ class Square:
         """ Prints a square of hashes
 
         """
-        if self.__size is 0:
+        if self.size is 0:
             print()
-            return
         else:
-            for i in range(self.__position[1]):
+            for i in range(self.position[1]):
                 print()
-            for i in range(self.__size):
-                print((" " * self.__position[0]) + ('#' * self.__size))
+            for i in range(self.size):
+                print((" " * self.position[0]) + ('#' * self.size))
