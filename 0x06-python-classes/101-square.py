@@ -62,12 +62,13 @@ class Square:
     def __str__(self):
         new_str = ""
         if self.__size is 0:
-            return
-        new_str += '\n' * self.__position[1]
-        for i in range(self.__size):
-            new_str += ' ' * self.position[0]
-            new_str += '#' * self.__size
-            new_str += '\n'
+            return ""
+        else:
+            new_str += '\n' * self.__position[1]
+            for i in range(self.__size):
+                new_str += ' ' * self.position[0]
+                new_str += '#' * self.__size
+                new_str += '\n'
         return new_str[:-1]
 
     def my_print(self):
