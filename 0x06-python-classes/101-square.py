@@ -59,6 +59,9 @@ class Square:
         """
         return self.__size ** 2
 
+    def __str__(self):
+        return str(self.my_print())
+
     def my_print(self):
         """ Prints a square of hashes
 
