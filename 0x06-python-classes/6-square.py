@@ -13,6 +13,23 @@ class Square:
         """ Set private attribute of square size to var size
             Set private attribute of position to var position
         """
+    @property
+    def position(self):
+        """ Defines position of square object
+        """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """ Sets position of value if its a tupe of 2 pos ints
+
+        """
+        if type(value) is not tuple or len(value) != 2 or\
+           type(value[0]) is not int or type(value[1]) is not int or\
+           value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
 
     @property
     def size(self):
@@ -36,23 +53,6 @@ class Square:
         """
         self.__size = value
 
-    @property
-    def position(self):
-        """ Defines position of square object
-        """
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """ Sets position of value if its a tupe of 2 pos ints
-
-        """
-        if type(value) is not tuple or len(value) != 2 or\
-           type(value[0]) is not int or value[0] < 0 or\
-           value[1] < 0 or type(value[1]) is not int:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
-
     def area(self):
         """ Defines area of square object
 
@@ -65,9 +65,9 @@ class Square:
         """
         if self.size is 0:
             print()
-            return ""
+            return
         for i in range(self.position[1]):
             print()
         for i in range(self.size):
             print((" " * self.position[0]) + ('#' * self.size))
-        return ""
+        return
