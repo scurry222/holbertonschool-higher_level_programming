@@ -51,6 +51,17 @@ multiple spaces after symbol:
     <BLANKLINE>
     Owo
 
+empty string:
+    >>> text_indentation("")
+
+trailing spaces start:
+    >>> text_indentation("      hewwo")
+    hewwo
+
+trailing spaces end:
+    >>> text_indentation("owo      ")
+    owo
+
 input not a string:
     >>> text_indentation(400)
     Traceback (most recent call last):

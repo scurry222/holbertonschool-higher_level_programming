@@ -42,6 +42,12 @@ None size:
         ...
     TypeError: size must be an integer
 
+infinite size:
+    >>> print_square(int('inf'))
+    Traceback (most recent call last):
+        ...
+    ValueError: invalid literal for int() with base 10: 'inf'
+
 empty size:
     >>> print_square()
     Traceback (most recent call last):
