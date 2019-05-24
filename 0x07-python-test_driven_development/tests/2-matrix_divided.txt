@@ -58,6 +58,16 @@ string element:
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+matrix is empty:
+    >>> matrix_divided([], 42)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix has one matrix:
+    >>> matrix_divided([42, 42], 42)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 different lengths of lists:
     >>> matrix_divided([[2, 4, 6], [8, 10, 12, 14]], 2)
     Traceback (most recent call last):
