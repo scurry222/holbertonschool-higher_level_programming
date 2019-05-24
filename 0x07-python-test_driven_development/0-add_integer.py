@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
-
+This function contains add_integer
 """
 
 def add_integer(a, b=98):
     """
-
     Args:
         a: int
         b: int

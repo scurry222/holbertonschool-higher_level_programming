@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """
+This function containts matrix_divided
 """
 
 def matrix_divided(matrix, div):
     """
-    args:
+    Args:
+        matrix: to divide
+        div: divisor
     """
     new_matrix = []
     j = 0
