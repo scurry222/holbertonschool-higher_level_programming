@@ -60,6 +60,8 @@ string element:
 
 matrix is empty:
     >>> matrix_divided([], 42)
+    Traceback (most recent call last):
+        ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 matrix has one matrix:
