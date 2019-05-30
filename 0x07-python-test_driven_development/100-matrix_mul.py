@@ -33,6 +33,7 @@ def matrix_mul(m_a, m_b):
     for element in rows:
         if (element != rows[0]):
             raise TypeError("each row of m_a must should be of the same size")
+    rows = []
     for row in m_b:
         rows.append(len(row))
     for element in rows:
