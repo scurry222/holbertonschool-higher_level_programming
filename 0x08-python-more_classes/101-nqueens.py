@@ -8,12 +8,15 @@
         row: x axis
         col: y axis
 """
+
+
 def isSafe(board, row, col):
     """check if queens placed are attacking"""
     for c in range(col):
         if board[c] is row or abs(board[c] - row) is abs(c - col):
             return False
     return True
+
 
 def checkBoard(board, col):
     """recursively place queens on board until end of board"""
