@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
+
 def matrix_mul(m_a, m_b):
+    """multiply two maticies - with many edge cases"""
     rows = []
     a_col = 0
     b_row = 0
