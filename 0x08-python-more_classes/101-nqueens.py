@@ -33,7 +33,7 @@ if __name__ == "__main__":
     """read from stdin"""
     import sys
     if len(sys.argv) != 2:
-        print("Usage: nQueens N")
+        print("Usage: nqueens N")
         sys.exit(1)
     n = 0
     """display errors"""
