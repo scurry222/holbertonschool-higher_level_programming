@@ -10,9 +10,6 @@ class MyList(list):
 
     def print_sorted(self):
         """ Print list ascending """
-        i = 0
-        ml = []
-        for i in self:
-            ml.append(i)
+        ml = [i for i in self]
         ml.sort()
         print(ml)
