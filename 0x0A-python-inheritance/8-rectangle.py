@@ -3,11 +3,11 @@
 8-rectangle : 1 class
 
 """
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
 class Rectangle(BaseGeometry):
     """ Class with inherited attributes from BaseGeometry """
-
 
     def __init__(self, width, height):
         """ Initializes rectangle object

@@ -4,6 +4,7 @@
 
 """
 
+
 def add_attribute(an_obj, an_attr, a_value):
     """ Checks object if attribute with value can be added to it
 
@@ -12,7 +13,6 @@ def add_attribute(an_obj, an_attr, a_value):
             an_attr(attribute) attribute
             a_value(obj: 'object') add to attribute
     """
-
 
     if not hasattr(an_obj, '__slots__') and not hasattr(an_obj, '__dict__'):
         raise TypeError("Can't add new attribute")

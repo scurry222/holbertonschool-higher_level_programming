@@ -8,7 +8,6 @@
 class MyList(list):
     """ Inherit list from MyList """
 
-
     def print_sorted(self):
         """ Print list ascending """
         i = 0
@@ -17,7 +16,3 @@ class MyList(list):
             ml.append(i)
         ml.sort()
         print(ml)
-
-        
-
-    

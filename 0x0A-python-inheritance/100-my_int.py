@@ -13,17 +13,12 @@ class MyInt(int):
         (awful prank idea)
     """
 
-
     def __eq__(self, other):
         """ Set eq attribute to '!=' """
 
-
         return super().__ne__(other)
-
 
     def __ne__(self, other):
         """ Set ne attribut to '==' """
 
-
         return super().__eq__(other)
-
