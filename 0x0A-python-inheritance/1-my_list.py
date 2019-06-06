@@ -12,4 +12,4 @@ class MyList(list):
         """ Print list ascending """
         ml = [i for i in self]
         ml.sort()
-        print("{}".format(new_list))
+        print("{}".format(ml))
