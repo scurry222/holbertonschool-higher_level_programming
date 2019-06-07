@@ -35,11 +35,10 @@ class Student:
         for attribute in attrs:
             if type(attribute) is not str:
                 return self.__dict__
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                return {key: value}
+        return {k: v for k, v in self.__dict__.items() if k in attrs}
 
     def reload_from_json(self, json):
         """ Sets attributes from student class to json file """
 
-        self.__dict__ = json
+        for key, value in json.items():
+            self.__dict__[key] = value

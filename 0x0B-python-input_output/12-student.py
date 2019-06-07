@@ -30,12 +30,9 @@ class Student:
 
         """
 
-        m_d = dict()
         if type(attrs) is not list:
             return self.__dict__
         for attribute in attrs:
             if type(attribute) is not str:
                 return self.__dict__
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                return {key: value}
+        return {k: v for k, v in self.__dict__.items() if k in attrs}
