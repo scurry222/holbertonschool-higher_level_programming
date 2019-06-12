@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 """
 100-append_after - 1 function
 
