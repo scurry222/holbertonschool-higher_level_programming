@@ -96,7 +96,7 @@ class Rectangle(Base):
         if args:
             for att, arg in zip(allowed, args):
                 setattr(self, att, arg)
-        if kwargs:
+        elif kwargs:
             for key, value in kwargs.items():
                 if key in allowed:
                     setattr(self, key, value)
