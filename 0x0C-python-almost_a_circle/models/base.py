@@ -28,6 +28,9 @@ class Base:
         """ Make a json str out of input dict """
         if list_dictionaries is None or []:
             return "[]"
+        if (type(list_dictionaries) != list or
+           not all(type(x) == dict for x in list_dictionaries)):
+            raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -42,8 +45,8 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ Load a strig from a json file """
-        if json_string is None or "":
+        """ Load a string from a json file """
+        if json_string is None or json_string is "":
             return "[]"
         return json.loads(json_string)
 

@@ -104,5 +104,6 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ Return dictionary representation of a
         rectangle for json encoding """
-        return {k.replace(
-                ): v for k, v in self.__dict__.items()}
+        my_dict = {'id': self.id, 'width': self.__width,
+                   'height': self.__height, 'x': self.__x, 'y': self.__y}
+        return my_dict
