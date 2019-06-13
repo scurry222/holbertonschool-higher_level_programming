@@ -92,7 +92,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Update values of a rectangle's attributes """
-        allowed = ['width', 'height', 'id', 'x', 'y']
+        allowed = ['id', 'width', 'height', 'x', 'y']
         if args:
             for att, arg in zip(allowed, args):
                 setattr(self, att, arg)
