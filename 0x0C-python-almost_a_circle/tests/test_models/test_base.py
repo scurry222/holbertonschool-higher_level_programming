@@ -122,8 +122,8 @@ class test_base(unittest.TestCase):
         self.assertEqual(
             "'int' object is not iterable", str(
                 e.exception))
-        err = "save_to_file() missing 1 required" +
-        "positional argument: 'list_objs'"
+        err = ("save_to_file() missing 1 required" +
+               " positional argument: 'list_objs'")
 
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file()
@@ -132,17 +132,16 @@ class test_base(unittest.TestCase):
     def test_from_json_string(self):
         """ Test from_json_string functionality """
 
-        err = "from_json_string() missing 1" +
-        " required positional argument: 'json_string'"
+        err = ("from_json_string() missing 1" +
+               " required positional argument: 'json_string'")
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string()
         self.assertEqual(err, str(e.exception))
 
-        err = "from_json_string() takes 1 positional argument
-        but 2 were given",
+        er = "from_json_string() takes 1 positional argument but 2 were given"
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string("str", 5)
-        self.assertEqual(err, str(e.exception))
+        self.assertEqual(er, str(e.exception))
 
         list_in = [
             {'id': 2, 'width': 2, 'height': 4},
@@ -202,11 +201,10 @@ class test_base(unittest.TestCase):
         sq_output = Square.load_from_file()
         self.assertEqual(sq_output, [])
 
-        err = "load_from_file() takes 1 positional argument
-        but 2 were given"
+        er = "load_from_file() takes 1 positional argument but 2 were given"
         with self.assertRaises(TypeError) as e:
             list_rectangles_output = Rectangle.load_from_file("str")
-        self.assertEqual(err, str(e.exception))
+        self.assertEqual(er, str(e.exception))
 
 if __name__ == '__main__':
     unittest.main()
