@@ -96,11 +96,12 @@ class Rectangle(Base):
         if args:
             for att, arg in zip(allowed, args):
                 setattr(self, att, arg)
-        elif kwargs:
+            return
+        else:
             for key, value in kwargs.items():
                 if key in allowed:
                     setattr(self, key, value)
-
+            return
     def to_dictionary(self):
         """ Return dictionary representation of a
         rectangle for json encoding """
