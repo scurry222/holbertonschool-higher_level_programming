@@ -47,13 +47,16 @@ class Base:
     def from_json_string(json_string):
         """ Load a string from a json file """
         if json_string is None or json_string is "":
-            return "[]"
+            return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
         """ Create dict """
-        o = cls(3, 3, 3)
+        if cls.__name__ == 'Rectangle':
+            o = cls(3, 3)
+        elif cls.__name__ == 'Square':
+            o = cls(1)
         o.update(**dictionary)
         return o
 
@@ -64,7 +67,7 @@ class Base:
             with open(cls.__name__ + ".json", 'r') as fp:
                 pass
         except FileNotFoundError:
-            return "[]"
+            return []
         with open(cls.__name__ + ".json", 'r') as fp:
             load = cls.from_json_string(fp.read())
             return [cls.create(**d) for d in load]
