@@ -3,13 +3,12 @@
     API
 """
 import requests
-from sys import argv
+import sys
 
 
 if __name__ == "__main__":
-    a = argv[1]
-    req = requests.get('https://swapi.co/api/people/?search={}'
-                       .format(a))
+    a = sys.argv[1]
+    req = requests.get('https://swapi.co/api/people/?search={}'.format(a))
     req_json = req.json()
     print('Number of results: {}'.format(req_json.get('count')))
     try:
