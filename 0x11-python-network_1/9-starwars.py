@@ -9,6 +9,7 @@ from sys import argv
 if __name__ == "__main__":
     req = requests.get('https://swapi.co/api/people/?search={}'
                        .format(argv[1]))
-    print('Number of results: {}'.format(req.json().get('count')))
-    for res in req.json().get('results'):
+    req_json = req.json()
+    print('Number of results: {}'.format(req_json.get('count')))
+    for res in req_json.get('results'):
         print(res.get('name'))
