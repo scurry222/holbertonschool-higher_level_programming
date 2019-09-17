@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-if (Number(process.argv[2] === undefined)) {
+if (process.argv[2] === undefined || isNaN(process.argv[2])) {
   console.log('Missing size');
 }
 let pX = 'X';
