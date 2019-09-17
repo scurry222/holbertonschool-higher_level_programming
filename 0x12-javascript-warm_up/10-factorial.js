@@ -1,11 +1,12 @@
 #!/usr/bin/node
 
-let fact = 1;
-if (process.argv[2] === undefined) {
-  console.log(fact);
-} else {
-  for (let x = Number(process.argv[2]); x !== 0; x--) {
-    fact = fact * x;
+function factorial(fact) {
+  if (fact < 0) {
+    return (-1);
   }
-  console.log(fact);
+  if (fact === 0 || isNaN(fact)) {
+    return (1);
+  }
+  return (fact * factorial(fact - 1))
 }
+console.log(factorial(Number(process.argv[2])));
