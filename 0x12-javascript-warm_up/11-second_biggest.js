@@ -6,6 +6,5 @@ if (process.argv.length <= 3) {
   arr = process.argv.slice(2);
   arr.sort();
   arr.reverse();
-  const second = arr[1];
-  console.log(second);
+  console.log(arr[1]);
 }
