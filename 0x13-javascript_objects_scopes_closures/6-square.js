@@ -36,15 +36,15 @@ module.exports = class Square extends Rectangle {
     this.size = size;
   }
 
-  charPrint (ch) {
-    if (ch === 'C') {
-      let pC = 'C';
+  charPrint (c) {
+    if (c) {
+      let pC = c;
       for (let y = 0; y < this.size; y++) {
         for (let x = 1; x < this.size; x++) {
-          pC += 'C';
+          pC += c;
         }
         console.log(pC);
-        pC = 'C';
+        pC = c;
       }
     } else {
       this.print();
