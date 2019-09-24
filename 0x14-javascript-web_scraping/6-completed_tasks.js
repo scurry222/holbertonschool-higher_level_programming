@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-request.get('https://jsonplaceholder.typicode.com/todos', function (err, res, body) {
+request.get(process.argv[2], function (err, res, body) {
   const d = {};
   const total = JSON.parse(body);
   if (res.statusCode === 200) {
